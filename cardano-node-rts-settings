@@ -1,0 +1,13 @@
+# RTS Settings for cardano node. These settings are meant to be placed in the node startup script
+# Work in progress
+
+## Coincashew settings
++RTS -N -A16m -qg -qb -RTS
+#-Doesn’t resolve missed leader checks, hundreds of missed checks per day
+#-Constant 15% cpu usage
+#-Disables parallel and load balanced garbage collection (which may have been the opposite of what they were intending)
+
+## Shard original Settings
++RTS -N -T -I0 -A16m --disable-delayed-os-memory-return --nonmoving-gc -RTS
+#-Perfect leader checks - zero missed checks
+#-Eventually runs out of memory
