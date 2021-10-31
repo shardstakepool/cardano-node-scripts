@@ -11,3 +11,7 @@
 +RTS -N -T -I0 -A16m --disable-delayed-os-memory-return --nonmoving-gc -RTS
 #-Perfect leader checks - zero missed checks
 #-Eventually runs out of memory
+
+## Experimental settings
+# Originally posted by ANFRA pool
++RTS -N6 --disable-delayed-os-memory-return -I0.3 -Iw600 -A16m -F1.5 -H2500M -T -S -RTS
