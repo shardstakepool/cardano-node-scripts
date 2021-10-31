@@ -1,0 +1,5 @@
+## Author: [SHARD] Cardano Stake Pool
+## Script to identify unreliable peers who have dropped connection with your relays multiple times in the previous day. You can replace 'yesterday' with other options such as --since=today or  --since='2020-07-29 00:00:00' --until='2020-07-29 12:00:00'
+## Run the following command on your relay nodes and you can remove/replace troublesome nodes identified within your mainnet-toplogy.json
+
+journalctl --unit=cardano-node --since=yesterday | grep --only-matching 'Skipping peer.*' | sort --unique
