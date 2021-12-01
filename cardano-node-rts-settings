@@ -7,10 +7,10 @@
 #-Constant 15% cpu usage
 #-Disables parallel and load balanced garbage collection (which may have been the opposite of what they were intending)
 
-## Shard original Settings
+## Testing mark sweep GC
 +RTS -N -T -I0 -A16m --disable-delayed-os-memory-return --nonmoving-gc -RTS
 #-Perfect leader checks - zero missed checks
-#-Eventually runs out of memory
+#-Eventually runs out of memory and crashes
 
 ## Experimental settings
 # Originally posted by ANFRA pool
